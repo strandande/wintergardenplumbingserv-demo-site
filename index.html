@@ -4,101 +4,266 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Winter Garden Plumbing Services | 24/7 Emergency Plumber</title>
+  <meta name="description" content="Winter Garden Plumbing Services offers emergency plumbing, drain cleaning, water heaters & more. 24/7 service, licensed & insured. Call (407) 863-0689.">
   <style>
-    /* General styles */
-    body { 
-      font-family: Arial, sans-serif; 
-      margin: 0; 
-      padding: 0; 
-      background-color: #f4f4f4; 
+    /* ====== GENERAL STYLES ====== */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
       color: #333;
+      line-height: 1.6;
     }
+    a { text-decoration: none; color: inherit; }
 
-    /* Header */
-    header { 
-      background-color: #0077cc; 
-      color: white; 
-      padding: 40px 20px; 
-      text-align: center; 
+    /* ====== HEADER / HERO ====== */
+    header.hero {
+      background: url('https://images.unsplash.com/photo-1581091012184-6d4d3e2e4ef1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGx1bWJpbmclMjB0ZWFtfGVufDB8fDB8&ixlib=rb-4.0.3&q=80&w=1600') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
     }
-    header h1 { 
-      margin: 0; 
-      font-size: 32px; 
+    header.hero h1 { font-size: 48px; margin-bottom: 10px; }
+    header.hero p { font-size: 20px; margin-bottom: 20px; }
+    header.hero .cta-btn {
+      display: inline-block;
+      background-color: #ff6600;
+      padding: 15px 30px;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: 0.3s;
     }
-    header p { 
-      margin: 5px 0 0 0; 
-      font-size: 18px; 
-    }
+    header.hero .cta-btn:hover { background-color: #e65c00; }
 
-    /* Main content */
-    main { 
-      padding: 40px 20px; 
-      max-width: 800px; 
-      margin: auto;
-      background: white;
+    /* ====== CONTACT FORM ====== */
+    .contact-form {
+      background: rgba(255,255,255,0.9);
+      padding: 30px;
+      margin: 30px auto;
+      max-width: 500px;
       border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-    main h2 { 
-      font-size: 24px; 
-      margin-top: 0; 
-      color: #0077cc;
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
     }
-    main p { 
-      font-size: 18px; 
-      line-height: 1.6; 
-    }
-
-    /* Call-to-action button */
-    .cta { 
-      display: inline-block; 
-      margin: 20px 0; 
-      padding: 12px 24px; 
-      background-color: #0077cc; 
-      color: white; 
-      text-decoration: none; 
-      border-radius: 5px; 
+    .contact-form button {
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
       font-weight: bold;
     }
-    .cta:hover { 
-      background-color: #005fa3; 
-    }
+    .contact-form button:hover { background-color: #005fa3; }
 
-    /* Footer */
-    footer { 
-      text-align: center; 
-      padding: 20px; 
-      background: #eee; 
-      margin-top: 40px;
-      font-size: 14px;
+    /* ====== SECTIONS ====== */
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section h2 { font-size: 32px; margin-bottom: 20px; color: #0077cc; text-align: center; }
+
+    /* ====== SERVICES ====== */
+    .services { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+    .service-card {
+      flex: 1 1 250px;
+      background: #f4f4f4;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .service-card img { width: 80px; margin-bottom: 15px; }
+    .service-card h3 { font-size: 20px; margin-bottom: 10px; }
+
+    /* ====== WHY US ====== */
+    .why-us { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+    .why-card {
+      flex: 1 1 300px;
+      background: #fff8e6;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .why-card h3 { font-size: 22px; margin-bottom: 10px; }
+
+    /* ====== GALLERY ====== */
+    .gallery { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; }
+    .gallery img { width: 300px; border-radius: 8px; object-fit: cover; }
+
+    /* ====== TESTIMONIALS ====== */
+    .testimonials { display: flex; flex-direction: column; gap: 20px; align-items: center; }
+    .testimonial {
+      background: #f4f4f4;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 600px;
+      text-align: center;
+    }
+    .stars { color: #ffcc00; margin-bottom: 10px; }
+
+    /* ====== FAQ ====== */
+    .faq-item { margin-bottom: 15px; }
+    .faq-item button {
+      width: 100%;
+      text-align: left;
+      background: #0077cc;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .faq-item button:hover { background: #005fa3; }
+    .faq-item .answer { display: none; padding: 10px; background: #f4f4f4; border-radius: 5px; margin-top: 5px; }
+
+    /* ====== FINAL CTA ====== */
+    .final-cta { text-align: center; background: #0077cc; color: white; padding: 60px 20px; }
+    .final-cta h2 { font-size: 36px; margin-bottom: 20px; }
+    .final-cta a { display: inline-block; padding: 15px 30px; background: #ff6600; color: white; border-radius: 5px; font-weight: bold; text-decoration: none; transition: 0.3s; }
+    .final-cta a:hover { background: #e65c00; }
+
+    /* ====== FOOTER ====== */
+    footer { text-align: center; padding: 20px; background: #eee; font-size: 14px; }
+
+    /* ====== RESPONSIVE ====== */
+    @media(max-width:768px) {
+      .services, .why-us, .gallery { flex-direction: column; align-items: center; }
     }
   </style>
 </head>
 <body>
 
-  <header>
+  <!-- HERO SECTION -->
+  <header class="hero">
     <h1>Winter Garden Plumbing Services</h1>
-    <p>24/7 Emergency Plumber</p>
+    <p>24/7 Emergency Plumber | Serving Winter Garden, FL</p>
+    <a class="cta-btn" href="tel:+14078630689">Call Now: (407) 863-0689</a>
+
+    <!-- CONTACT FORM -->
+    <div class="contact-form">
+      <h3>Contact Us</h3>
+      <form action="mailto:info@wintergardenplumbing.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="tel" name="phone" placeholder="Your Phone">
+        <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   </header>
 
-  <main>
-    <h2>Fast, Honest, Affordable Plumbing</h2>
-    <p>We provide top-quality plumbing services in Winter Garden, FL. Our team is available 24/7 for emergency repairs, drain cleaning, water heaters, and more. Licensed & insured. Call us today for a free estimate!</p>
-    
-    <h2>Services</h2>
-    <ul>
-      <li>Emergency plumbing repairs</li>
-      <li>Drain cleaning & unclogging</li>
-      <li>Water heater installation & repair</li>
-      <li>Pipe repair & replacement</li>
-      <li>Leak detection</li>
-    </ul>
+  <!-- SERVICES SECTION -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1595243930086-80c684c8c1e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=80" alt="Emergency Plumbing">
+        <h3>Emergency Plumbing</h3>
+        <p>Fast 24/7 emergency repairs for any plumbing issue.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1601597102043-49a0f9b2f8d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=80" alt="Drain Cleaning">
+        <h3>Drain Cleaning</h3>
+        <p>Unclogging and cleaning drains to keep your water flowing.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1581091012184-6d4d3e2e4ef1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=80" alt="Water Heater Repair">
+        <h3>Water Heater Repair</h3>
+        <p>Installation, maintenance, and emergency water heater service.</p>
+      </div>
+    </div>
+  </section>
 
-    <a class="cta" href="tel:+14078630689">Call Now: (407) 863-0689</a>
-  </main>
+  <!-- WHY US SECTION -->
+  <section id="why-us">
+    <h2>Why Choose Us?</h2>
+    <div class="why-us">
+      <div class="why-card">
+        <h3>Licensed & Insured</h3>
+        <p>Professional, safe, and fully certified plumbing services.</p>
+      </div>
+      <div class="why-card">
+        <h3>24/7 Service</h3>
+        <p>We’re available around the clock for emergencies.</p>
+      </div>
+      <div class="why-card">
+        <h3>Trusted Reviews</h3>
+        <p>4.7★ rating with dozens of happy customers.</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- GALLERY SECTION -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1581091012184-6d4d3e2e4ef1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=300" alt="Plumbing work">
+      <img src="https://images.unsplash.com/photo-1601597102043-49a0f9b2f8d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=300" alt="Plumbing tools">
+      <img src="https://images.unsplash.com/photo-1581091012184-6d4d3e2e4ef1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=300" alt="Plumber team">
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="reviews">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>“I have no more words to say about Winter Garden Plumbing Services, as they are the best of the best service provider.” — Leah G.</p>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>“They were skilled and admirable employees who quickly identified the issue and resolved it.” — Randy G.</p>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>“Outdoor drain kept clogging … Working perfectly now.” — Google User</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <button onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='block'?'none':'block'">
+        Do you provide emergency service?
+      </button>
+      <div class="answer">Yes! We offer 24/7 emergency plumbing services in Winter Garden, FL.</div>
+    </div>
+    <div class="faq-item">
+      <button onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='block'?'none':'block'">
+        Are you licensed and insured?
+      </button>
+      <div class="answer">Absolutely. All our plumbers are licensed and insured for your peace of mind.</div>
+    </div>
+    <div class="faq-item">
+      <button onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='block'?'none':'block'">
+        How can I request a quote?
+      </button>
+      <div class="answer">Call us directly at (407) 863-0689 or use the contact form above.</div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <h2>Ready to Fix Your Plumbing?</h2>
+    <a href="tel:+14078630689">Call Now: (407) 863-0689</a>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    &copy; 2026 Winter Garden Plumbing Services | Serving Winter Garden, FL
+    &copy; 2026 Winter Garden Plumbing Services | 731 S Dillard St, Winter Garden, FL
   </footer>
 
 </body>
